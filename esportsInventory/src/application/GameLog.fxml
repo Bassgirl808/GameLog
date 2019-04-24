@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="BaseBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameLogController">
+   <top>
+      <HBox id="UsernameHBox" prefHeight="39.0" prefWidth="294.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="LabelUsername" alignment="CENTER" graphicTextGap="8.0" prefHeight="17.0" prefWidth="211.0" text="Username:">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <TextField id="UsernameTextField" fx:id="usernameField" prefHeight="25.0" prefWidth="266.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox id="BaseLeftVBox" prefHeight="249.0" prefWidth="525.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox id="InventoryHBox" prefHeight="129.0" prefWidth="445.0">
+               <children>
+                  <VBox id="XboxVBox" prefHeight="200.0" prefWidth="82.0">
+                     <children>
+                        <Label id="LabelXboxConsole " text="Xbox Console">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ListView id="XboxLlistView" fx:id="listXbox" prefHeight="112.0" prefWidth="84.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="PlayStationVBox" prefHeight="100.0" prefWidth="137.0">
+                     <children>
+                        <Label id="LabelPlayStationConsole" prefWidth="148.0" text="PlayStation Console">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <ListView id="PlayStationListView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="SwitchVBox" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="LabelSwitchConsole" text="Switch Console">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ListView id="SwitchListView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="WiiUVBox" prefHeight="100.0" prefWidth="99.0">
+                     <children>
+                        <Label id="LabelWiiUConsole" text="WiiU Console">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ListView id="WiiUListView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="LabelVRConsole" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="LabelVRConsole" text="VR Console">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ListView id="VRListView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox id="GameAccessoriesHBox" prefHeight="57.0" prefWidth="525.0">
+               <children>
+                  <VBox id="GameVBox" prefHeight="100.0" prefWidth="251.0">
+                     <children>
+                        <Label id="LabelGames" text="Games">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="GamesComboBox" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox id="AccessoriesVBox" prefHeight="100.0" prefWidth="224.0">
+                     <children>
+                        <Label id="LabelAccessories" text="Accessories">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="AccessoriesComboBox" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox id="LowerVBox" prefHeight="110.0" prefWidth="525.0">
+               <children>
+                  <HBox id="BrokenItemsHBox" prefHeight="51.0" prefWidth="525.0">
+                     <children>
+                        <Label id="LabelBrokenItems" text="Broken Items:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField id="BrokenItemsTextField" fx:id="fieldBroken" onAction="#addBroken">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button id="BrokenItemsEnterButton" fx:id="buttonEnterBroken" mnemonicParsing="false" onAction="#addBroken" prefHeight="25.0" prefWidth="102.0" text="Enter" />
+                     </children>
+                  </HBox>
+                  <HBox id="MissingItemsHBox" prefHeight="53.0" prefWidth="525.0">
+                     <children>
+                        <Label id="LabelMissingItems" text="Missing Items:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField id="MissingItemsTextField" fx:id="fieldMissing" onAction="#addMissing">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button id="MissingItemsEnterButton" fx:id="buttonEnterMissing" mnemonicParsing="false" onAction="#addMissing" prefHeight="25.0" prefWidth="102.0" text="Enter" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox id="BrokenMissingHBox" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox id="BrokenVBox" prefHeight="100.0" prefWidth="254.0">
+                     <children>
+                        <Label id="LabelBroken" text="Broken" />
+                        <TextArea fx:id="displayBroken" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="MissingVBox" prefHeight="100.0" prefWidth="257.0">
+                     <children>
+                        <Label id="LabelMissing" text="Missing" />
+                        <TextArea fx:id="displayMissing" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <TableView id="DisplayTableView" prefHeight="249.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn id="UsernameColumn" prefWidth="105.19995427131653" text="Username" />
+          <TableColumn id="ConsoleColumn" prefWidth="92.80010986328125" text="Console" />
+            <TableColumn id="GameColumn" prefWidth="86.39988708496094" text="Game" />
+            <TableColumn id="AccessoriesColumn" prefWidth="94.0001220703125" text="Accessories" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </TableView>
+   </right>
+   <bottom>
+      <HBox id="LowerHBox" prefHeight="28.0" prefWidth="905.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="ResetButton" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Reset">
+               <HBox.margin>
+                  <Insets left="550.0" right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="OverallEnterButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Enter">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="ExitButton" fx:id="buttonExit" alignment="CENTER" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="81.0" text="Exit" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
